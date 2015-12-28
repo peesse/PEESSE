@@ -14,6 +14,7 @@
 a{
     text-decoration: none;
 }
+
 h1,h2,h4{
     font-family: 'Lobster Two', 'Lato', Calibri, Arial, sans-serif;
 }
@@ -37,6 +38,10 @@ h4{
 
 h5{
     font-size: 1.3em;
+}
+
+.mobile{
+    display: none;
 }
 .clearfix:after{
     display:block;
@@ -109,25 +114,17 @@ header nav ul li a.active, header nav ul li a:hover, header nav ul li a:focus{
 }
 
 .section-title{
-<<<<<<< HEAD
     color:#ecf0f1;
     padding-bottom: 1em;
 }
 
 .section-title hr{
     border-top: 1px solid #ecf0f1;
-=======
-    color:#FFF;
-}
-
-.section-title hr{
-    border-top: 1px solid #FFF;
->>>>>>> 835c776f945b7caae23891761addf67512cff1b8
     margin-top: 1.25em;
 }
 
+
 .section-subtitle {
-<<<<<<< HEAD
     color:#ecf0f1;
 }
 
@@ -148,40 +145,17 @@ header nav ul li a.active, header nav ul li a:hover, header nav ul li a:focus{
 }
 
 .half{
-    width: 48%;
-=======
-    color:#FFF;
-}
-
-.section-subtitle hr {
-    border-top: 2px solid #FFF;
-    margin-top: .25em;
-}
-.section-content {
-    color:#FFF;
-    font-size: 1.3em;
-
-}
-
-.half{
-    width: 50%
->>>>>>> 835c776f945b7caae23891761addf67512cff1b8
+    width: 48%
 }
 
 .left{
     float: left;
-<<<<<<< HEAD
     margin-right: 2%;
-=======
->>>>>>> 835c776f945b7caae23891761addf67512cff1b8
 }
 
 .right{
     float: right;
-<<<<<<< HEAD
     margin-left: 2%;
-=======
->>>>>>> 835c776f945b7caae23891761addf67512cff1b8
 }
 /* 
     $INDEX04 : HOME
@@ -199,11 +173,7 @@ section#home{
 }
 
 .home-content{
-<<<<<<< HEAD
     color: #ecf0f1;
-=======
-    color: #FFF;
->>>>>>> 835c776f945b7caae23891761addf67512cff1b8
     text-align: center;
 }
 
@@ -222,7 +192,6 @@ section#about{
     $INDEX06 : EXPERIENCE
 */
 section#experience{
-<<<<<<< HEAD
     background-color: #7f8c8d;
 }
 .experience-list{
@@ -239,9 +208,6 @@ table.experience-list{
 .td-right{
     width:50%;
     text-align: right;
-=======
-    background-color: #bdc3c7;
->>>>>>> 835c776f945b7caae23891761addf67512cff1b8
 }
 
 #experience .date{
@@ -252,7 +218,6 @@ table.experience-list{
     $INDEX07 : CONTACT
 */
 section#contact{
-<<<<<<< HEAD
     background-color: #95a5a6;
 }
 
@@ -263,7 +228,95 @@ section#contact{
 #contact span.fa{
     margin-right: .5em;
     font-size: 4em;
-=======
-    background-color: #7f8c8d;
->>>>>>> 835c776f945b7caae23891761addf67512cff1b8
+}
+
+
+/*
+    $INDEX8 - MEDIA QUERIES : TABLETS
+*/ 
+@media screen and (max-width: 1020px ) {
+    .header-inner{
+        width: 90%;
+    }
+    .half{
+        width: auto;
+    }
+    .left{
+        float: none;
+        margin: 0;
+    }
+    .right{
+        float: none;
+        margin: 0;
+    }
+    .experience-list{
+        padding: 0;
+    }
+}
+
+/*
+    $INDEX8 - MEDIA QUERIES : SMARTPHONES
+*/ 
+@media screen and (max-width: 767px ) {
+    .mobile{
+        display: block;
+    }
+
+    .standard{
+        display:none;
+    }
+
+    .headerstandard{
+        display: none;
+    }.headermobile{
+        display: block;
+    }
+    header nav ul li{
+        display: block;
+    }
+    .header-inner{
+        width: auto;
+    }
+    .half{
+        width: auto;
+    }
+    .left{
+        float: none;
+        margin: 0;
+    }
+    .right{
+        float: none;
+        margin: 0;
+    }
+
+    #page section{
+        min-height: 500px;
+        width:100%;
+        padding: 110px 0 20px 0;
+    }
+    #page section:first-child{
+        margin-top: 0px;
+        padding: 110px 0 20px 0;
+    }
+
+    .experience-list{
+        padding: 0;
+    }
+    .home-content h2{
+        padding: 0;
+    }
+
+    .halfmobile{
+        display: inline-block;
+        width: 50%;
+        text-align:center;
+    }
+
+    .leftmobile{
+        float: left;
+    }
+
+    .rightmobile{
+        float: right;
+    }
 }
