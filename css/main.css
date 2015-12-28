@@ -1,4 +1,9 @@
+/* 
+    $INDEX01 : GENERAL
+*/
+
 @import url(http://fonts.googleapis.com/css?family=Lobster+Two);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,100);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,100);
 
 *{
@@ -13,22 +18,38 @@ h1,h2,h4{
     font-family: 'Lobster Two', 'Lato', Calibri, Arial, sans-serif;
 }
 
+
 h1{
     font-size: 4em;
 }
 
-.clearfix{
+h2{
+    font-size: 5em;
+}
+
+h3{
+    font-size: 3em;
+}
+
+h4{
+    font-size: 1.8em;
+}
+
+h5{
+    font-size: 1.3em;
+}
+.clearfix:after{
     display:block;
     clear:both;
     content:"";
 }
 
 /* 
-    $INDEX01 : HEADER
+    $INDEX02 : HEADER
 */
 
 header{
-    position:static;
+    position:fixed;
     top:0;
     left:0;
     width:100%;
@@ -69,4 +90,103 @@ header nav ul li a.active, header nav ul li a:hover, header nav ul li a:focus{
     border-radius: 5px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
+}
+
+
+/* 
+    $INDEX03 : SECTION
+*/
+#page section{
+    min-height: 500px;
+    width:100%;
+    padding: 110px 0 20px 0;
+}
+#page section:first-child{
+    margin-top: 0px;
+    padding: 250px 0 20px 0;
+}
+#page section:last-child{
+}
+
+.section-title{
+    color:#FFF;
+}
+
+.section-title hr{
+    border-top: 1px solid #FFF;
+    margin-top: 1.25em;
+}
+
+.section-subtitle {
+    color:#FFF;
+}
+
+.section-subtitle hr {
+    border-top: 2px solid #FFF;
+    margin-top: .25em;
+}
+.section-content {
+    color:#FFF;
+    font-size: 1.3em;
+
+}
+
+.half{
+    width: 50%
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+/* 
+    $INDEX04 : HOME
+*/
+
+/* IMAGE FROM : https://commons.wikimedia.org/wiki/File:Code.jpg */
+section#home{
+    background:url(../img/code.jpg) no-repeat ;
+    background-color: #95a5a6;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+    background-size: 100%;
+
+}
+
+.home-content{
+    color: #FFF;
+    text-align: center;
+}
+
+.home-content h2{
+    padding-top: 245px;
+}
+
+/* 
+    $INDEX05 : ABOUT
+*/
+section#about{
+    background-color: #95a5a6;
+}
+
+/* 
+    $INDEX06 : EXPERIENCE
+*/
+section#experience{
+    background-color: #bdc3c7;
+}
+
+#experience .date{
+    font-style: italic;
+}
+
+/* 
+    $INDEX07 : CONTACT
+*/
+section#contact{
+    background-color: #7f8c8d;
 }
