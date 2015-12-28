@@ -109,16 +109,25 @@ header nav ul li a.active, header nav ul li a:hover, header nav ul li a:focus{
 }
 
 .section-title{
+<<<<<<< HEAD
     color:#ecf0f1;
     padding-bottom: 1em;
 }
 
 .section-title hr{
     border-top: 1px solid #ecf0f1;
+=======
+    color:#FFF;
+}
+
+.section-title hr{
+    border-top: 1px solid #FFF;
+>>>>>>> 835c776f945b7caae23891761addf67512cff1b8
     margin-top: 1.25em;
 }
 
 .section-subtitle {
+<<<<<<< HEAD
     color:#ecf0f1;
 }
 
@@ -140,16 +149,39 @@ header nav ul li a.active, header nav ul li a:hover, header nav ul li a:focus{
 
 .half{
     width: 48%;
+=======
+    color:#FFF;
+}
+
+.section-subtitle hr {
+    border-top: 2px solid #FFF;
+    margin-top: .25em;
+}
+.section-content {
+    color:#FFF;
+    font-size: 1.3em;
+
+}
+
+.half{
+    width: 50%
+>>>>>>> 835c776f945b7caae23891761addf67512cff1b8
 }
 
 .left{
     float: left;
+<<<<<<< HEAD
     margin-right: 2%;
+=======
+>>>>>>> 835c776f945b7caae23891761addf67512cff1b8
 }
 
 .right{
     float: right;
+<<<<<<< HEAD
     margin-left: 2%;
+=======
+>>>>>>> 835c776f945b7caae23891761addf67512cff1b8
 }
 /* 
     $INDEX04 : HOME
@@ -167,7 +199,11 @@ section#home{
 }
 
 .home-content{
+<<<<<<< HEAD
     color: #ecf0f1;
+=======
+    color: #FFF;
+>>>>>>> 835c776f945b7caae23891761addf67512cff1b8
     text-align: center;
 }
 
@@ -186,6 +222,7 @@ section#about{
     $INDEX06 : EXPERIENCE
 */
 section#experience{
+<<<<<<< HEAD
     background-color: #7f8c8d;
 }
 .experience-list{
@@ -202,6 +239,9 @@ table.experience-list{
 .td-right{
     width:50%;
     text-align: right;
+=======
+    background-color: #bdc3c7;
+>>>>>>> 835c776f945b7caae23891761addf67512cff1b8
 }
 
 #experience .date{
@@ -212,6 +252,7 @@ table.experience-list{
     $INDEX07 : CONTACT
 */
 section#contact{
+<<<<<<< HEAD
     background-color: #95a5a6;
 }
 
@@ -222,4 +263,7 @@ section#contact{
 #contact span.fa{
     margin-right: .5em;
     font-size: 4em;
+=======
+    background-color: #7f8c8d;
+>>>>>>> 835c776f945b7caae23891761addf67512cff1b8
 }
