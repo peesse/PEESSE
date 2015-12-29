@@ -43,6 +43,30 @@ h5{
 .mobile{
     display: none;
 }
+
+
+
+#bttop{
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+    width: 3em;
+    height: 3em;
+    background: #ecf0f1;
+    border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+
+}
+
+#bttop span{
+    display: block;
+    text-align: center;
+    color:#2c3e50;
+    font-size: 2em;
+    padding-top: .25em;
+}
+
 .clearfix:after{
     display:block;
     clear:both;
@@ -116,11 +140,12 @@ header nav ul li a.active, header nav ul li a:hover, header nav ul li a:focus{
 .section-title{
     color:#ecf0f1;
     padding-bottom: 1em;
+    text-align: center;
 }
 
 .section-title hr{
     border-top: 1px solid #ecf0f1;
-    margin-top: 1.25em;
+    margin: 1.25em 0;
 }
 
 
@@ -213,6 +238,9 @@ table.experience-list{
 #experience .date{
     font-style: italic;
 }
+#experience .experience-content{
+    margin-bottom: .5em;
+}
 
 /* 
     $INDEX07 : CONTACT
@@ -234,7 +262,7 @@ section#contact{
 /*
     $INDEX8 - MEDIA QUERIES : TABLETS
 */ 
-@media screen and (max-width: 1020px ) {
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
     .header-inner{
         width: 90%;
     }
@@ -257,7 +285,7 @@ section#contact{
 /*
     $INDEX8 - MEDIA QUERIES : SMARTPHONES
 */ 
-@media screen and (max-width: 767px ) {
+@media screen and (max-device-width: 767px ) {
     .mobile{
         display: block;
     }
@@ -269,7 +297,7 @@ section#contact{
     .headerstandard{
         display: none;
     }.headermobile{
-        display: block;
+        display: none;
     }
     header nav ul li{
         display: block;
