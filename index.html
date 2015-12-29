@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Stéphane PITTET - Concepteur JAVA/JEE et PLM</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=max-device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
@@ -23,7 +23,10 @@
                 <div id="logo">
                     <h1>Peesse</h1>
                 </div>
-                <nav class="clearfix">
+                <div id="burger" class="clearfix">
+                    <span class="fa fa-bars"></span>
+                </div>
+                <nav id="mobilenav" class="clearfix">
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">A Propos</a></li>
@@ -33,17 +36,17 @@
                 </nav>
             </div>
         </header>
-        <header class="headerstandard">
+        <header class="headerstandard standard">
             <div class="header-inner">
                 <div id="logo">
                     <h1>Peesse</h1>
                 </div>
                 <nav class="clearfix">
                     <ul>
-                        <li><a class="active" href="#home">Home</a></li>
-                        <li><a href="#about">A Propos</a></li>
-                        <li><a href="#experience">Expériences</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a data-ancre="home" class="active" href="#home">Home</a></li>
+                        <li><a data-ancre="about" href="#about">A Propos</a></li>
+                        <li><a data-ancre="experience" href="#experience">Expériences</a></li>
+                        <li><a data-ancre="contact" href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -196,7 +199,7 @@
                             <hr>
                         </div>
                         <div class="section-content">
-                            <h5>SOGETI HIGHT TECH, pour AREVA TA</h5>
+                            <h5>SOGETI HIGH TECH, pour AREVA TA</h5>
                             <p class="date">Depuis Mai 2015 : </p>
                             <p class="experience-content">Réalisation de maintenances évolutives et correctives sur une application PLM/GED basée sur le progiciel ENOVIA/V6.</p>
                         </div>
@@ -286,8 +289,7 @@
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/main.js"></script>
+        <script src="js/vendor/jquery.appear.js"></script>
 
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -297,5 +299,6 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-71749741-1','auto');ga('send','pageview');
         </script>
+        <script src="js/main.js"></script>
     </body>
 </html>

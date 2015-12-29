@@ -77,7 +77,7 @@ h5{
     $INDEX02 : HEADER
 */
 
-header{
+header.headerstandard{
     position:fixed;
     top:0;
     left:0;
@@ -86,39 +86,47 @@ header{
     background: #2c3e50;
     color: #ecf0f1;
 }
-header h1, header nav a {
+header.headerstandard h1, header.headerstandard nav a {
     color:#ecf0f1;
     line-height: 230px;
 }       
-.header-inner{
+.headerstandard .header-inner{
     width: 70%;
     margin: 0 auto;
 }
 
-header #logo{
+header.headerstandard #logo{
     float:left;
 
 }
 
-header nav{
+header.headerstandard nav{
     float: right;
 }
 
-header nav ul li{
+header.headerstandard nav ul li{
     display: inline-block;
     margin-left: 1em;
     font-size: 1.3em;
 }
-header nav a{
+header.headerstandard nav a{
     padding: .5em;
+    background-color: #2c3e50;
 }
 
-header nav ul li a.active, header nav ul li a:hover, header nav ul li a:focus{
-    background: #ecf0f1;
+header.headerstandard nav ul li a.active, header.headerstandard nav ul li a:hover{
+    background-color: #ecf0f1;
     color:#2c3e50;
     border-radius: 5px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
+}
+
+header.headerstandard nav ul li a{
+        -webkit-transition: background .5s ease-out;
+        -moz-transition: background .5s ease-out;
+        -o-transition: background .5s ease-out;
+    transition: background .5s ease-out;
 }
 
 
@@ -126,7 +134,6 @@ header nav ul li a.active, header nav ul li a:hover, header nav ul li a:focus{
     $INDEX03 : SECTION
 */
 #page section{
-    min-height: 500px;
     width:100%;
     padding: 110px 0 20px 0;
 }
@@ -189,11 +196,11 @@ header nav ul li a.active, header nav ul li a:hover, header nav ul li a:focus{
 /* IMAGE FROM : https://commons.wikimedia.org/wiki/File:Code.jpg */
 section#home{
     background:url(../img/code.jpg) no-repeat ;
-    background-color: #95a5a6;
-        -webkit-background-size: 100%;
-        -moz-background-size: 100%;
-        -o-background-size: 100%;
-    background-size: 100%;
+    background-color: #FFF;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    background-size: cover;
 
 }
 
@@ -255,17 +262,31 @@ section#contact{
 
 #contact span.fa{
     margin-right: .5em;
-    font-size: 4em;
+    font-size: 2.5em;
 }
 
+/*
+    $INDEX8 - MEDIA QUERIES : DESKTOP/LAPTOP
+*/ 
+@media screen and (min-device-width: 1025px) {
+    #page section{
+        min-height: 750px;
+    }
+}
 
 /*
     $INDEX8 - MEDIA QUERIES : TABLETS
 */ 
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px){
-    .header-inner{
-        width: 90%;
+     #page section{
+        min-height: 750px;
     }
+
+    .headerstandard .header-inner{
+        width: 90%;
+        margin: 0 auto;
+    }
+
     .half{
         width: auto;
     }
@@ -280,12 +301,19 @@ section#contact{
     .experience-list{
         padding: 0;
     }
+
+    #contact span.fa{
+    margin-right: .5em;
+    font-size: 3em;
+    }
 }
 
 /*
     $INDEX8 - MEDIA QUERIES : SMARTPHONES
 */ 
 @media screen and (max-device-width: 767px ) {
+
+    /* GENERAL */
     .mobile{
         display: block;
     }
@@ -294,17 +322,6 @@ section#contact{
         display:none;
     }
 
-    .headerstandard{
-        display: none;
-    }.headermobile{
-        display: none;
-    }
-    header nav ul li{
-        display: block;
-    }
-    .header-inner{
-        width: auto;
-    }
     .half{
         width: auto;
     }
@@ -316,28 +333,97 @@ section#contact{
         float: none;
         margin: 0;
     }
+    
+    h2{
+        font-size: 2.3em;
+    }
 
+    h3{
+        font-size: 1.8em;
+    }
+    h4{
+        font-size: 1.5em;
+    }
+    body{
+        position: relative;
+    }
+    /* HEADER */
+
+    .headermobile .header-inner{
+        width: 100%;
+    }
+    header.headermobile{
+        position: fixed;
+        width: 100%;
+    }
+    header.headermobile nav ul li{
+        display: block;
+    }
+
+    .headermobile h1{
+        color:#ecf0f1;
+        font-size: 2em;
+        float: left;
+    }
+
+    .headermobile #burger{
+        text-align: right;
+        color:#ecf0f1;
+        font-size: 2em;
+        background-color: #2c3e50;
+        padding-right: .5em;
+    }
+    .headermobile #logo{
+        background-color: #2c3e50;
+        padding-left: 1em;
+    }
+    .headermobile nav{
+        display: none;
+        width:100%;
+        padding: 1em 0 ;
+        background-color: #2c3e50;
+        border-radius: 0 0 5px 5px ;
+            -moz-border-radius: 0 0 5px 5px ;
+            -webkit-border-radius: 0 0 5px 5px ;
+    }
+    .headermobile nav ul li{
+        padding-left: 1em ;
+    }
+
+    .headermobile a{
+        color:#ecf0f1;
+        font-size: 1.5em;
+    }
+    
+    /* SECTION */
     #page section{
         min-height: 500px;
         width:100%;
-        padding: 110px 0 20px 0;
+        padding: 60px 0 20px 0;
     }
     #page section:first-child{
         margin-top: 0px;
-        padding: 110px 0 20px 0;
+        padding: 60px 0 20px 0;
     }
 
-    .experience-list{
-        padding: 0;
-    }
+    /* HOME */
     .home-content h2{
+        padding-top: 75px;
+    }
+    
+    /* EXPERIENCE */
+    .experience-list{
         padding: 0;
     }
 
     .halfmobile{
         display: inline-block;
         width: 50%;
+    }
+
+    .halfmobile span{
         text-align:center;
+
     }
 
     .leftmobile{
@@ -347,4 +433,17 @@ section#contact{
     .rightmobile{
         float: right;
     }
+
+    /* CONTAC */
+
+    #contact span.fa{
+        margin-right: .5em;
+        font-size: 3em;
+    }
+
+    #contact p{
+        text-align: center;
+    }
+
+    
 }
